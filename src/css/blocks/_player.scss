@@ -1,0 +1,51 @@
+.player {
+    background: url(../img/we-bg.png);
+    background-size: cover;
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+
+    &__title {
+
+        @include title;
+        color: #2f3234;
+        line-height: rem(64px);
+
+        padding-bottom: rem(55px);
+        text-align: center;
+        padding-top: 15vh;
+
+        @include tablets{
+            padding-bottom: rem(100px);
+        }
+        @include phones{
+            padding-bottom: rem(55px);
+            font-size: rem(60px);
+            padding-top: 12vh;
+        }
+    }
+
+    &__content{
+        width: 70%;
+        height: 40%;
+
+        @include tablets{
+            width: 90%;
+        }
+        @include phones{
+            width: 100%;
+        }
+        
+   
+        background-color: #fff;
+       
+    }
+
+    
+    
+}

@@ -1,0 +1,167 @@
+.team {
+    background-image: url(../img/team.png);
+    background-size: cover;
+    position: relative;
+    background-position: center;
+
+    &__part {
+        position: absolute;
+        width: 50%;
+        left: 50%;
+        background-color: rgba(47, 50, 52, 0.9);
+        height: 100%;
+
+        @include tablets{
+            width: 100%;
+            left: 0;
+            text-align: center;
+        }
+
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-top: 17%;
+        width: 70%;
+        height: 100%;
+        
+
+        @include phones{
+            margin-top: 0;
+            justify-content: space-evenly;
+        }
+
+    }
+
+    &__title {
+        @include title;
+        color: #f9b43b;
+        line-height: rem(64px);
+        margin-bottom: rem(50px);
+
+        @include phones{
+            font-size: rem(50px);
+            margin-bottom: 3vh;
+        }
+    }
+
+    
+
+    &__list{
+        @include tablets{
+            padding: 0 15%;
+        }
+
+        @include phones{
+            padding: 0 0;
+        }
+    }
+
+    &__item {
+        margin-bottom: rem(35px);
+
+        @include phones{
+            margin-bottom: 3vh;
+            text-align: center;
+        }
+
+    }
+
+    &__name {
+
+        color: #ffffff;
+        font-family: Gagalin;
+        font-size: rem(14px);
+        font-weight: 400;
+        line-height: rem(28px);
+        padding-bottom: rem(17px);
+        position: relative;
+        left: rem(30px);
+        display: inline-flex;
+        cursor: pointer;
+
+        @include phones{
+            font-size: rem(25px);
+        }
+
+    }
+
+    &__name:before {
+        content: "";
+        color: #f9b43b;
+        border: rem(10px) solid transparent;
+        border-top: rem(10px) solid #f9b43b;
+        position: absolute;
+        top: rem(10px);
+        left: rem(-30px);
+
+    }
+
+    &__name_active {
+        color: #f9b43b;
+        
+    }
+
+    &__name_active:before {
+        content: "";
+        color: #f9b43b;
+        border: rem(10px) solid transparent;
+        border-bottom: rem(10px) solid #f9b43b;
+        position: absolute;
+        top: rem(-1px);
+        left: rem(-30px);
+
+    }
+
+    &__info {
+        display: flex;
+        height: 0;
+        overflow: hidden;
+       
+       
+
+        @include tablets{
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+
+    &__name_active~&__info {
+        height: 100%;
+        overflow: hidden;
+        
+    }
+
+    &__img{
+        object-fit: contain;
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        color: #ffffff;
+        font-family: Ubuntu;
+        font-size: rem(14px);
+        line-height: rem(24px);
+        padding-left: rem(21px);
+
+        @include tablets{
+            padding-left: 0;
+            padding-top: rem(12px);
+        }
+    }
+
+    &__position {
+        font-weight: 700;
+        padding-bottom: rem(12px);
+    }
+
+    &__description {
+        font-weight: 300;
+    }
+
+
+
+}

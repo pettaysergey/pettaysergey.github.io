@@ -1,0 +1,188 @@
+.header {
+  display: flex;
+
+  align-items: center;
+
+  padding-top: rem(12px);
+  height: 10vh;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  max-width: 10%;
+  margin-left: 0;
+  z-index: 2;
+
+  @include tablets {
+    max-width: 20%;
+  }
+
+}
+
+
+.nav {
+  display: flex;
+  margin-left: auto;
+
+  @include tablets {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    @include menu_style;
+    width: auto;
+  }
+
+  &__item {
+    display: flex;
+    width: auto;
+
+
+    &:before {
+      content: "\2022";
+      padding-left: 1vw;
+      padding-right: 1vw;
+    }
+
+    &__item:first-child:before {
+      content: "";
+
+    }
+  }
+
+
+
+  &_active {
+    position: fixed;
+    background-color: #2f3234;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+
+
+    .nav__list {
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .nav__item {
+      display: flex;
+      flex-direction: column;
+      font-size: rem(20px);
+
+      &:before {
+        content: "\2022";
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        text-align: center;
+      }
+
+      &:first-child:before {
+        content: "";
+      }
+
+    }
+
+  }
+
+}
+
+.hamburger {
+ 
+  margin-left: 5vw;
+  z-index: 2;
+  height: auto;
+  position: relative;
+  display: none;
+  width: 24px;
+  height: 24px;
+  display: none;
+  align-items: center;
+
+  @include tablets{
+    display: flex;
+  }
+ 
+
+  &:before {
+    bottom: 100%;
+    margin-bottom: 5px;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    top: 0;
+    background: #ffffff;
+    position: absolute;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+  &:after {
+    bottom: 0;
+    margin-top: 5px;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: #ffffff;
+    position: absolute;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+
+
+  &__menu {
+    width: 100%;
+    height: 4px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: block;
+    opacity: 1;
+    transition: 0.3s;
+
+
+  }
+
+  &_active {
+    z-index: 2;
+   
+    margin-left: auto;
+
+
+    &:before {
+      content: "";
+      transform: rotate(45deg);
+      top: 9px;
+      transition: 0.3s;
+
+    }
+
+    &:after {
+      content: "";
+      transform: rotate(-45deg);
+      bottom: 11px;
+      transition: 0.3s;
+
+    }
+
+    .hamburger__menu {
+      opacity: 0;
+      transition: 0.3s;
+    }
+
+
+  }
+}

@@ -1,0 +1,45 @@
+.button {
+  display: inline-flex;
+
+  @include tablets{
+    margin-left: auto;
+  }
+
+
+  &__red {
+
+    background-color: #e45028;
+    border: none;
+    border-radius: rem(7px);
+    @include menu_style;
+    margin-left: 2vw;
+    max-width: 10vh;
+    text-align: center;
+    padding: 11% 12%;
+
+
+
+    @include tablets {
+      max-width: 10vh;
+      margin-left: auto;
+      padding: 13%;
+
+
+    }
+
+    @include phones {
+      margin-left: 0;
+      max-width: 13vh;
+      margin-right: 3vw;
+    }
+
+  }
+}
+
+.button_slider {
+  @include tablets {
+    margin-left: 3vw;
+  }
+
+
+}

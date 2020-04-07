@@ -1,0 +1,107 @@
+html,
+body {
+  height: 100%;
+}
+
+
+
+body {
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.hidden{
+overflow: hidden;
+}
+
+
+
+.wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.maincontent{
+  height: 100%;
+  transition: transform 0.5s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.section {
+  height: 100vh;
+
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1100px;
+  width: 95vw;
+  height: 100%;
+}
+
+ul {
+  padding-inline-start: rem(0px);
+  padding-inline-start: 0px;
+
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+h2 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+
+}
+
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+input {
+  text-decoration: none;
+  border-width: 0px;
+  width: inherit;
+  outline: 0;
+  outline-offset: 0;
+}
+
+textarea{
+  outline: 0;
+  outline-offset: 0;
+}
+
+button{
+  border: none;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+ 
+
+}
+
+span {
+  display: block;
+}

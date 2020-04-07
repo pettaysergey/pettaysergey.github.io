@@ -1,0 +1,105 @@
+.we {
+  background: url(../img/we-bg.png);
+  background-size: cover;
+
+  &__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+  }
+
+  &__title {
+
+    @include title;
+    color: #2f3234;
+    line-height: rem(64px);
+    
+    padding-bottom: rem(55px);
+    text-align: center;
+
+    @include phones{
+      
+      padding-bottom: 3vh;
+      font-size: rem(55px);
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    @include phones{
+    flex-direction: column;
+  }
+    
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 31%;
+
+    @include phones{
+      flex-direction: initial;
+      width: 100%;
+      margin-bottom: 4vw;
+    }
+  }
+
+  &__block{
+    width: 100%;
+    
+    @include phones{
+      margin-left: 2vw;
+      
+    }
+  }
+
+  &__icon {
+    padding-bottom: rem(34px);
+    @include phones{
+      text-align: center;
+      padding-bottom: 0;
+
+      &_svg{
+        max-width: 25vw;
+        width: rem(88px);
+        height: rem(85px);
+      }
+    }
+    
+  }
+
+  &__caption {
+    color: #2f3234;
+    font-family: Lifehack;
+    font-size: rem(24px);
+    font-weight: 500;
+    line-height: rem(28px);
+   text-align: center;
+    padding-bottom: rem(20px);
+
+    @include phones{
+      padding-bottom: 2vw;
+      font-size: 6vw;
+    }
+
+  }
+
+  &__text {
+    opacity: 0.8;
+    color: #2f3234;
+    font-family: Ubuntu;
+    font-size: rem(14px);
+    font-weight: 300;
+    line-height: rem(24px);
+  }
+
+
+}

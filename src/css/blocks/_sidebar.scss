@@ -1,0 +1,44 @@
+.sidebar {
+  width: 6%;
+  position: fixed;
+  right: 8vh;
+  top: 20vh;
+  left: 90vw;
+  z-index: 100;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+  }
+
+  &__item {
+    width: rem(16px);
+    height: rem(16px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: rem(8px);
+  }
+
+  &__active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: rem(1px) solid;
+    border-radius: 50%;
+    width: rem(16px);
+    height: rem(16px);
+    color: #ffffff;
+  }
+
+  &__link {
+    width: rem(6px);
+    height: rem(6px);
+    border: rem(3px) solid;
+    border-radius: 50%;
+    color: #ffffff;
+  }
+}

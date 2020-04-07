@@ -1,0 +1,65 @@
+.map {
+    // background-image: url(../img/map.png);
+    background-size: cover;
+    position: relative;
+    background-position: center;
+}
+
+.footer {
+    background-color: rgba(00, 00, 00, 0.9);
+    height: 8%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+
+    @include phones {
+        height: 28vw;
+    }
+
+    &__contant {
+        height: 100%;
+        display: flex;
+
+        @include phones {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 2%;
+            text-align: center;
+        }
+    }
+
+    &__text {
+        width: 50%;
+        font-family: Ubuntu;
+        font-size: rem(14px);
+        line-height: rem(24px);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include phones {
+            width: 100%;
+        }
+
+    }
+
+    &__address {
+        color: #ffffff;
+        font-weight: 300;
+
+
+    }
+
+    &__number {
+        color: #e45028;
+        font-weight: 700;
+        padding-left: rem(5px);
+
+    }
+
+
+
+}

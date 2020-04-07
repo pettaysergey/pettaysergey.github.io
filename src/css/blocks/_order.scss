@@ -1,0 +1,338 @@
+.order {
+    background-image: url(../img/bg_order.png);
+    background-size: cover;
+
+    &__error {
+        color: #f9b43b;
+        font-size: rem(12px);
+        padding-top: rem(3px);
+    }
+
+    &__title {
+        @include title;
+        color: #f9b43b;
+        padding-top: 17%;
+        padding-bottom: 7%;
+        text-align: center;
+
+        @include phones {
+            font-size: 11vw;
+            padding-top: 4vh;
+            padding-bottom: 1vh;
+        }
+    }
+
+    &__content {
+        display: flex;
+        width: 100%;
+
+        @include tablets {
+            flex-direction: column;
+            align-items: center;
+            padding: 0 15vw;
+        }
+
+        @include phones {
+            padding: 0;
+
+        }
+    }
+
+    &__left {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+
+        @include tablets {
+            width: 100%;
+
+        }
+    }
+
+    &__row {
+        display: flex;
+        flex: 1;
+
+        @include tablets {
+            margin-bottom: 2vw;
+        }
+
+        @include phones {
+            margin-bottom: 1vw;
+            justify-content: space-around;
+        }
+
+        &_right {
+            margin-bottom: rem(20px);
+
+            @include phones {
+                margin-bottom: 1.4vh;
+            }
+
+
+        }
+
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        width: 100%;
+        margin-right: rem(20px);
+
+        &:last-child {
+            margin-right: rem(0px);
+        }
+    }
+
+
+    &__caption {
+        color: #ffffff;
+        font-family: Ubuntu;
+        font-size: rem(14px);
+        font-weight: 300;
+        line-height: rem(24px);
+        margin-bottom: rem(5px);
+
+        @include phones {
+            margin-bottom: 0.5vh;
+        }
+
+
+    }
+
+    &__input {
+        height: rem(35px);
+        border: rem(2px) solid transparent;
+        border-radius: rem(5px);
+        padding: rem(5px) rem(5px);
+
+        @include phones {
+            height: 5vh;
+        }
+
+
+        &:focus {
+            border-color: #f9b43b;
+        }
+
+        &:hover {
+            border-color: #f9b43b;
+        }
+
+    }
+
+    &__right {
+        width: 50%;
+        margin-left: rem(20px);
+
+        @include tablets {
+            width: 100%;
+            margin-left: 0;
+
+        }
+    }
+
+    &__textarea {
+        width: 100%;
+        height: rem(140px);
+        resize: none;
+        border: rem(2px) solid transparent;
+        border-radius: rem(5px);
+
+        @include phones {
+            height: 17vh;
+        }
+
+        &:focus {
+            border-color: #f9b43b;
+        }
+
+        &:hover {
+            border-color: #f9b43b;
+        }
+
+    }
+
+    &__btn {
+        display: flex;
+        margin-right: 1vw;
+        width: rem(200px);
+
+        @include phones {
+            width: auto;
+        }
+
+    }
+
+    &__radio {
+        margin-right: rem(10px);
+        display: none;
+
+        &:checked~.order__btn_title:before {
+            border: rem(1px) solid #e45028;
+        }
+
+        &:checked~.order__btn_title:after {
+            content: "";
+            width: rem(8px);
+            height: rem(8px);
+            background-color: #e45028;
+            border-radius: 50%;
+            position: absolute;
+            left: rem(5px);
+            bottom: rem(11px);
+
+        }
+
+
+    }
+
+
+    &__btn_title {
+        color: #ffffff;
+        font-family: Ubuntu;
+        font-size: rem(14px);
+        font-weight: 300;
+        line-height: rem(24px);
+        margin-bottom: rem(5px);
+        padding-left: rem(28px);
+        position: relative;
+
+        &:before {
+            content: "";
+            width: rem(16px);
+            height: rem(16px);
+            border: rem(1px) solid transparent;
+            background-color: #fff;
+            border-radius: 50%;
+            position: absolute;
+            left: rem(0px);
+            bottom: rem(6px);
+
+
+        }
+
+    }
+
+    &__check {
+        display: flex;
+
+
+
+        &_title:before {
+            content: "";
+            border: rem(1px) solid #fff;
+            border-radius: 2%;
+        }
+
+
+    }
+
+    &__checkbox {
+        margin-right: rem(10px);
+        display: none;
+
+        &:checked~.order__check_title:before {
+            content: "\2713";
+            font-size: rem(21px);
+            color: #e45028;
+            border-radius: 2%;
+            border: rem(1px) solid #e45028;
+            text-align: center;
+            line-height: rem(17px)
+        }
+    }
+
+    &__button {
+        display: inline-block;
+        width: rem(97px);
+        background-color: #e45028;
+        font-family: Ubuntu;
+        font-size: rem(13px);
+        font-weight: 500;
+        line-height: rem(30px);
+        text-transform: uppercase;
+        color: #ffffff;
+        margin-right: rem(20px);
+        border-radius: rem(5px);
+        cursor: pointer;
+
+        @include phones {
+            margin-right: 0;
+        }
+    }
+
+
+    &__button_none {
+        cursor: pointer;
+        color: #ffffff;
+        font-family: Ubuntu;
+        font-size: rem(14px);
+        font-weight: 300;
+        line-height: rem(24px);
+        background: none;
+        width: rem(97px);
+    }
+
+    &__overlay {
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(12, 12, 12, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &_container {
+            width: 50%;
+            height: 20%;
+            font-family: Ubuntu;
+            font-size: rem(22px);
+            font-weight: 300;
+            color: #000000;
+            padding-left: 2%;
+            padding-right: 2%;
+            background-color: #f9b43b;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            @include phones{
+                width: 90%;
+                height: 65%;
+                font-size: rem(18px);
+            }
+
+        }
+
+        &_close{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.8);
+            border: 1px solid #000000;
+            position: absolute;
+            left:90%;
+            color: #000000;
+            font-size: 40px;
+            left: 97%;
+            top: -15%;
+            text-align: center;
+            line-height: 21px;
+
+            @include phones{
+                top: -4%;
+                left: 94%;
+            }
+            
+        }
+
+       
+    }
+}

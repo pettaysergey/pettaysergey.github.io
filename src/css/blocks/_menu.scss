@@ -1,0 +1,108 @@
+.menu {
+    background-image: url(../img/menu.png);
+    background-size: cover;
+    display: flex;
+ 
+    height: 100vh;
+    background-position: center;
+
+    @include tablets{
+        position: relative;
+        width: 100%;
+    }
+
+
+    &__label {
+        @include title;
+        color: #ffffff;
+        padding-top: 10%;
+        padding-left: 8%;
+        padding-right: 3%;
+       
+
+    }
+
+    &__list {
+        display: flex;
+        height: 100%;
+      margin-left: auto;
+
+      @include tablets{
+        position: absolute;
+        right: 0;
+        
+      }
+    }
+
+    &__item {
+        display: flex;
+        height: 100%;
+
+
+
+        &_active {
+
+            .menu__block {
+                width: rem(500px);
+                max-width: 35vw;
+
+                @include tablets{
+                    max-width: 70vw;
+                    width: 100%;
+                }
+            }
+
+
+            .menu__title {
+                color: #f9b43b;
+            }
+        }
+    }
+
+    &__link {
+        position: relative;
+        display: block;
+        height: 100%;
+        background-size: cover;
+        width: rem(80px);
+        color: #ffffff;
+        font-family: Gagalin;
+        font-size: rem(40px);
+        font-weight: 400;
+        line-height: rem(64px);
+
+        @include tablets{
+            max-width: 12vw;
+            
+        }
+
+    }
+
+    &__title {
+        width: 100%;
+        position: absolute;
+        transform: rotate(-90deg);
+        white-space: nowrap;
+        bottom: rem(60px);
+
+    }
+
+    &__block {
+        width: rem(0px);
+        overflow: hidden;
+        height: 100%;
+        color: #ffffff;
+        font-family: Ubuntu;
+        font-size: rem(14px);
+        line-height: rem(24px);
+        background-color: rgba(12, 12, 12, 0.7);
+    }
+
+    &__text {
+        padding: 7% 7%;
+    }
+
+
+
+
+}

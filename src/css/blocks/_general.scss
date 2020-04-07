@@ -1,0 +1,97 @@
+.general {
+  background: url(../img/Rectangle.png) no-repeat;
+  background-size: cover;
+  width: 100%;
+  background-position: center;
+
+
+  &__content {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    width: 100%;
+    height: 80vh;
+
+    @include tablets{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+  }
+
+  &__img {
+    padding-right: rem(11px);
+    position: relative;
+
+    @include phones{
+      max-width: 80%;
+      text-align: center;
+    }
+    
+  }
+
+  &__drops {
+    position: absolute;
+    top: 17%;
+    left: -5%;
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: rem(213px);
+    margin-top: 3vh;
+
+  }
+
+  &__title {
+    color: #f9b43b;
+    @include title;
+    padding-bottom: 1vw;
+
+    @include tablets{
+      font-size: 10vw;
+    }
+    @include phones{
+      font-size: 17vw;
+    }
+  }
+
+  &__description {
+
+    letter-spacing: rem(-2px);
+    line-height: rem(60px);
+    color: #ffffff;
+    font-family: Lifehack;
+    font-size: rem(65px);
+    font-weight: 500;
+
+    @include tablets{
+      font-size: 9vw;
+      text-align: center;
+    }
+
+    @include phones{
+      font-size: 14vw;
+    }
+  }
+
+  &__icon {
+    margin-bottom: 8vh;
+  }
+
+}

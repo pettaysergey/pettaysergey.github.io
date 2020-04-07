@@ -1,0 +1,331 @@
+.slider {
+    
+    background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
+
+    &__content {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__control_prev {
+        position: absolute;
+        width: rem(28px);
+        height: rem(28px);
+        transform: rotate(45deg);
+        border: rem(2px) solid #fff;
+        border-radius: rem(4px);
+        border-top-width: 0;
+        border-right-width: 0;
+        left: 1vw;
+
+    }
+
+    &__control_next {
+        position: absolute;
+        width: rem(28px);
+        height: rem(28px);
+        transform: rotate(45deg);
+        border: rem(2px) solid #fff;
+        border-radius: rem(4px);
+        border-bottom-width: 0;
+        border-left-width: 0;
+        right: 1vw;
+
+    }
+
+    &__list{
+        display: flex;
+        width: 100%;
+        overflow: hidden;
+        height: 100%;
+    }
+
+
+
+    &__item {
+        display: flex;
+        min-width: 100%;
+        overflow: hidden;
+       
+
+        @include tablets {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+        }
+    }
+
+    &__left {
+        display: flex;
+        height: 100%;
+        width: 50%;
+        align-items: center;
+
+        @include tablets {
+            width: 80%;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+
+        }
+
+        @include phones {
+            width: 100%;
+            height: 45vh;
+        }
+
+    }
+
+    &__composition {
+        display: inline-block;
+        position: absolute;
+        width: rem(90px);
+        height: rem(90px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: rem(10px);
+        background-color: rgba(227, 80, 40, 0.1);
+        top: 20%;
+        left: 0;
+
+        &:hover{
+            background-color: rgba(227, 80, 40, 0.4);
+        }
+
+       
+
+        &:hover .slider__table{
+            opacity: 1;
+            transition: 0.5s;
+        }
+
+        @include tablets {
+            top: 4vh;
+            left: 20vw;
+        }
+
+        @include phones {
+            top: 3vh;
+            left: 1vw;
+            width: rem(80px);
+            height: rem(80px);
+
+        }
+
+
+        &_img {
+            max-width: rem(46px);
+            height: rem(60px);
+        }
+
+        &_text {
+            color: #ffffff;
+            font-family: Gagalin;
+            font-size: rem(14px);
+            font-weight: 400;
+            
+
+        }
+    }
+
+    &__img {
+
+        position: relative;
+        overflow: hidden;
+        margin-top: 30%;
+        transform: translateY(-30%);
+        max-width: 100%;
+        padding-left: 5%;
+        padding-right: 5%;
+
+        @include tablets {
+            width: 80%;
+            bottom: -5vh;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        @include phones {
+            width: 85%;
+            bottom: -7vh;
+        }
+
+    }
+
+    &__kkal {
+        display: inline-block;
+        position: absolute;
+        color: #ffffff;
+        font-family: Gagalin;
+        font-size: rem(14px);
+        font-weight: 400;
+        line-height: rem(24px);
+        opacity: 0.8;
+        width: rem(60px);
+        height: rem(80px);
+
+        bottom: 25%;
+        left: 0;
+
+        @include tablets {
+            top: 4vh;
+            right: 20vw;
+            left: auto;
+        }
+
+        @include phones {
+            top: 4vh;
+            right: 5vw;
+        }
+
+        &_img {
+            width: rem(60px);
+            height: rem(60px);
+            position: relative;
+            vertical-align: middle;
+        }
+
+        &_mass {
+            font-size: rem(20px);
+            position: absolute;
+            top: rem(30px);
+            left: rem(14px);
+            opacity: 0.6;
+        }
+
+        &_text {
+            position: absolute;
+            top: rem(58px);
+            left: rem(13px);
+            opacity: 0.6;
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+
+        @include tablets {
+            width: 80%;
+        }
+
+        @include phones {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        @include title;
+        color: #ffffff;
+        line-height: rem(63px);
+        margin-bottom: 7vh;
+
+        @include tablets {
+            padding: 0 3%;
+            margin-bottom: 3vh;
+        }
+
+        @include phones {
+            font-size: rem(48px);
+            line-height: rem(52px);
+            margin-bottom: 1vh;
+        }
+    }
+
+    &__text {
+        color: #ffffff;
+        font-family: Ubuntu;
+        font-size: rem(14px);
+        font-weight: 300;
+        line-height: rem(24px);
+        margin-bottom: 5vh;
+        padding-right: 3%;
+
+        @include phones {
+            margin-bottom: 1vh;
+        }
+
+    }
+
+    &__unit {
+        display: flex;
+
+
+        @include tablets {
+            justify-content: center;
+        }
+    }
+
+    &__price {
+        display: flex;
+        color: #e35028;
+        font-family: Gagalin;
+        font-size: rem(72px);
+        font-weight: 400;
+        line-height: rem(28px);
+
+        @include phones {
+            font-size: rem(50px);
+        }
+
+
+        &_small {
+            display: flex;
+            align-items: flex-end;
+            font-size: rem(30px);
+        }
+    }
+
+    &__table {
+        opacity: 0;
+        background: rgba(255, 255, 255, 0.8);
+        padding: rem(20px);
+        border-radius: rem(10px);
+        position: absolute;
+        z-index: 3;
+        left: rem(88px);
+        top: 0%;
+        color: #000000;
+
+        @include tablets{
+            top: 0;
+            left: 90px;
+        }
+
+        @include phones{
+            top: 0;
+            left: 80px;
+            padding: rem(10px);
+           
+        }
+
+        &_svg {
+            width: rem(45px);
+            height: rem(45px);
+            margin-right: rem(15px);
+
+            @include phones{
+                margin-right: rem(10px);
+            }
+        }
+
+       
+
+        &_weight{
+            padding-left: rem(40px);
+            white-space: nowrap;
+
+            @include phones{
+                padding-left: rem(20px);
+            }
+        }
+    }
+}
